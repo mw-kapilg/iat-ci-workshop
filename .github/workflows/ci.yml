@@ -21,7 +21,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       
       # Sets up MATLAB on a GitHub-hosted runner
@@ -29,9 +29,9 @@ jobs:
         uses: matlab-actions/setup-matlab@v2
 
       # TASK 0 - Runs a MATLAB command using run-command action
-       - name: Run  MATLAB command
-         uses: matlab-actions/run-command@v2
-         with:
+      - name: Run MATLAB
+        uses: matlab-actions/run-command@v2
+        with:
            command: ver
 
       # TASK 1 - Runs all tests in the repository using run-tests action
